@@ -1,0 +1,35 @@
+.subscribe-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92.3vh;
+    width: 100%;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210915/pngtree-geometric-lines-simple-white-gold-gradient-background-image_879481.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .subscribe-button {
+    width: 100px; /* Adjust the width as desired */
+    height: 30px; /* Adjust the height as desired */
+  }
+
+  .input-container {
+    margin-bottom: 25px; /* Adjust the value to increase or decrease the space below the email input box */
+  }
+  
+  .space-below-email {
+    height: 15px; /* Adjust the value to increase or decrease the space below the email input box */
+  }
+
+  .email-input {
+    width: 300px; /* Change the width value to your desired width */
+  }
+
+  .subscribe-button {
+    background-color: rgb(196, 173, 84);
+    border-color: rgb(196, 173, 84);
+    color: white;
+    
+  }

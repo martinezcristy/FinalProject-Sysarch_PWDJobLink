@@ -1,0 +1,33 @@
+.bgImage{
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210915/pngtree-geometric-lines-simple-white-gold-gradient-background-image_879481.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 92.3vh;
+  width: 100%;
+}
+
+.job-listing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .job-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    gap: 20px; /* Adjust the gap between grid items */
+  }
+  
+  .job-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
