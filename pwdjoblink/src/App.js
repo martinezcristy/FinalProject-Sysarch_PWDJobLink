@@ -9,6 +9,7 @@ import EmployersPage from './Pages/EmployersPage';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage.jsx';
 import JobListPage from './Pages/JobListPage';
+import ApplicationPage from './Pages/ApplicationPage';
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/employers" element={<EmployersPage />} />
         <Route path="/subscribe" element={<SubscribePage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/apply" element={<ApplicationPage />} />
       </Routes>
     </Router>
   );

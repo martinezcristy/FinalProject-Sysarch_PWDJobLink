@@ -31,3 +31,21 @@
     align-items: center;
     margin-top: 10px; /* Adjust the margin as needed */
   }
+
+  .custom-button {
+    background-color: rgb(196, 173, 84);
+    border-color: rgb(196, 173, 84);
+    color: white;
+    padding: 7px 17px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+
+  
+  

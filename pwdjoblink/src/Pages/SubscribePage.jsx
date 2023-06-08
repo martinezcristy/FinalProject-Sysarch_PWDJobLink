@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import './SubscribePage.css';
+import PopUpAlert from '../Components/PopUpAlert';
 
 function SubscribePage() {
   const [email, setEmail] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -11,7 +14,21 @@ function SubscribePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
+
+    if (!email) {
+      setShowModal(true);
+      setIsSuccess(false);
+    } else {
+      setShowModal(true);
+      setIsSuccess(true);
+      // Handle form submission
+      // Reset form
+      setEmail('');
+    }
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -30,10 +47,11 @@ function SubscribePage() {
             />
           </div>
           <button type="submit" className="subscribe-button">
-          Subscribe
+            Subscribe
           </button>
         </form>
       </div>
+      <PopUpAlert showModal={showModal} closeModal={closeModal} isSuccess={isSuccess} />
     </div>
   );
 }

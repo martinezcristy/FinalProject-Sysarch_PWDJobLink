@@ -11,10 +11,15 @@
   }
 
   .input-field {
-    width: 320px; 
+    margin-bottom: 10px; 
   }
+  
 
   .registration-heading {
     margin-bottom: 35px; 
   }
   
+  .form-control{
+    margin-bottom: 13px;
+  }
+

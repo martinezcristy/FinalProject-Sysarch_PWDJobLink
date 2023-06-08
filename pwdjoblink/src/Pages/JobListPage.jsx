@@ -1,7 +1,15 @@
 import React from 'react';
 import './JobListPage.css';
+import { useNavigate } from 'react-router-dom';
 
 function JobListingPage() {
+  const navigate = useNavigate();
+  
+  const handleApplyNow = () => {
+    // Perform the redirection to the desired page
+    navigate('/apply');
+  };
+
   const jobs = [
     {
       id: 1,
@@ -27,7 +35,7 @@ function JobListingPage() {
         description: 'Ensure accurate and timely preparation and monitoring of reports and assist finance team with preparation of compliance documentation.',
         requirements: ['Background in Business Administration', 'Proficient on Google sheets or MS Excel','At least 1 year experience','Able to rotate shifts'],
     },
-    // Add more job objects here
+    
   ];
 
   return (
@@ -41,22 +49,24 @@ function JobListingPage() {
       <p></p>
       <p></p>
       <div className="job-grid">
-        {jobs.map((job) => (
-          <div key={job.id} className="job-card">
-            <h3>{job.title}</h3>
-            <p>{job.company}</p>
-            <p>{job.location}</p>
-            <p>{job.description}</p>
-            <ul>
-              {job.requirements.map((requirement, index) => (
-                <li key={index}>{requirement}</li>
-              ))}
-            </ul>
-            <div className="button-container">
-              <button className="apply-button">Apply Now</button>
+          {jobs.map((job) => (
+            <div key={job.id} className="job-card">
+              <h3>{job.title}</h3>
+              <p>{job.company}</p>
+              <p>{job.location}</p>
+              <p>{job.description}</p>
+              <ul>
+                {job.requirements.map((requirement, index) => (
+                  <li key={index}>{requirement}</li>
+                ))}
+              </ul>
+              <div className="button-container">
+                <button className="custom-button apply-button" onClick={handleApplyNow}>
+                  Apply Now
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
     </div>
